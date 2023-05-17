@@ -1,0 +1,48 @@
+{
+    "short_name": "pwateste",
+    "name": "pwa aplicacao",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#4D5360",
+    "background_color": "#31506F",
+    "description": "Aplicação full stack para disciplina mobile",
+    "icons": [
+        {
+            "src": "assets/img/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "assets/img/128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "assets/img/144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "assets/img/152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "assets/img/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "assets/img/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/img/192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+        ],
+        "shortcuts": []
+}
