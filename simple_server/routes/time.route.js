@@ -6,6 +6,7 @@ let Time = require('../model/Time');
 
 // api to add time
 timeRoutes.route('/add').post(function (req, res) {
+  console.log("aqui")
   let time = new Time(req.body);
   time.save()
   .then(time => {
