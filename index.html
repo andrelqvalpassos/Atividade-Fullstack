@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-   
+
     <link rel="manifest" href="manisfest.webmanifest">
     <meta name="description" content="pwateste">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="msapplication-TileImage" content="assets/img/144.png">
@@ -68,31 +70,23 @@
     <body>
         <div class="container">
             <h1>Seja bem-vindo ao golscore</h1>
-            <p>Aqui você vai encontrar coisas sobre seu time do coração</p>
+            <p>Aqui você vai encontrar coisas sobre seu time do coração!</p>
 
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Buscar clubes">
                 <button id="search-button" onclick="searchMovies()">Buscar</button>
             </div>
-        </div>
+        </div>5
 
 
         <div id="contentTime"></div>
         <h3 id='title'></h3>
 
         <script>
-            // Exemplo de manipulação do botão de busca com JavaScript
-            // document.getElementById("search-button").addEventListener("click", function () {
-            //     var searchInput = document.getElementById("search-input").value;
-            //     // Aqui você pode implementar a lógica para realizar a busca
-            //     console.log("Buscando clubes por: " + searchInput);
-            // });
-        </script>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <script>
             function searchMovies() {
-                $('#title').empty();
+                $('#name').empty();
+                $('#year').empty();
+                $('#historia').empty();
 
                 var settings = {
                     "async": true,
@@ -103,7 +97,10 @@
 
                 $.ajax(settings).done(function (response) {
                     console.log(response);
-                    $('#title').append(response.Title);
+                    $('#name').append(response.name);
+                    // $("#my_image").attr("src", response.Poster);
+                    // $('#description').append(response.Plot);
+                    // $('#imdb').append("IMDB: " + response.imdbRating);
                 });
 
             }
@@ -111,6 +108,14 @@
     </body>
 
     </html>
+
+    <script>
+        jQuery.noConflict();
+        // Agora você pode usar jQuery em vez de $
+        jQuery(document).ready(function () {
+            // Seu código jQuery aqui
+        });
+    </script>
 
     <script src="index.js"></script>
 </body>
